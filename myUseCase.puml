@@ -1,0 +1,15 @@
+@startuml
+left to right direction
+skinparam packageStyle rectangle
+actor "Пользователь" as User
+package "Система" {
+    usecase "Выход из системы" as UC_Login
+    usecase "Регистрация" as UC_Register
+    usecase "Сброс пароля" as UC_Reset
+    usecase "Восстановление пароля" as UC_Reset2
+}
+User --> UC_Login
+User --> UC_Register
+User --> UC_Reset
+User --> UC_Reset2
+@enduml
